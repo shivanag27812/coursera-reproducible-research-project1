@@ -1,8 +1,7 @@
 Reproducible Research: Assignment 1
 ===================================
 
-Adam Suhajda, 20160902
-======================
+
 
 Introducing task and getting data
 ---------------------------------
@@ -30,7 +29,7 @@ estimates of the total daily number of steps?
     ## 
     ##     date
 
-    setwd("C:/Users/suhaada/Desktop/R/Coursera/Reproducible res")
+    setwd("C:/Users/shivanag/Desktop/R/Coursera/Reproducible res")
     dataset <- read.csv("./activity.csv")
     dataset$data <- as.Date(dataset$date, format="%Y-%m-%d")
     dataset$weekday <- wday(dataset$date, label=T,abbr=T)
@@ -44,7 +43,7 @@ Question 1:total number of steps taken per day
     total <- aggregate(steps ~ date, dataset, sum)
     hist(total$steps, xlab= "Total steps per day", col="red", breaks = 10)
 
-![alt tag](https://github.com/Suhaada/Reproducible-Research-Assignment-1/blob/master/1.PNG)
+![alt tag](https://github.com/Shivanag/Reproducible-Research-Assignment-1/blob/master/1.PNG)
 
 ![](PA1_template_files/figure-markdown_strict/unnamed-chunk-2-1.png)
 
@@ -169,5 +168,5 @@ Question 4: differences in activity patterns on weekdays and weekends
 
     library(lattice)
     xyplot( steps ~ interval | dayTypeInWeek, data = avgStepdayTypeInWeek, type="l", layout=c(1,2), xlab="Interval", ylab="Number of steps")
- ![alt tag](https://github.com/Suhaada/Reproducible-Research-Assignment-1/blob/master/4.PNG)
+ ![alt tag](https://github.com/Shivanag/Reproducible-Research-Assignment-1/blob/master/4.PNG)
 ![](PA1_template_files/figure-markdown_strict/unnamed-chunk-12-1.png)

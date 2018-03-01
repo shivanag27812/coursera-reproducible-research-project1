@@ -2,7 +2,7 @@
 output: html_document
 ---
 # Reproducible Research: Assignment 1
-Adam Suhajda, 20160902
+
 ========================================================
 
 ## Introducing task and getting data
@@ -14,7 +14,7 @@ Make a histogram of the total number of steps taken each day and Calculate and r
 
 ```{r}
 library(lubridate)
-setwd("C:/Users/suhaada/Desktop/R/Coursera/Reproducible res")
+setwd("C:/Users/shivanag/Desktop/R/Coursera/Reproducible res")
 dataset <- read.csv("./activity.csv")
 dataset$data <- as.Date(dataset$date, format="%Y-%m-%d")
 dataset$weekday <- wday(dataset$date, label=T,abbr=T)
